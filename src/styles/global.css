@@ -1,0 +1,71 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background:
+    radial-gradient(circle at 18% 8%, rgba(255, 212, 232, 0.7), transparent 28rem),
+    linear-gradient(180deg, #fff7fb 0%, #fff0f7 46%, #fff8fc 100%);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--text);
+  letter-spacing: 0;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 1.04;
+}
+
+h2 {
+  font-weight: 700;
+  line-height: 1.12;
+}
+
+h3 {
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+p {
+  color: var(--text-light);
+}
+
+::selection {
+  background: rgba(255, 95, 162, 0.2);
+  color: var(--text);
+}

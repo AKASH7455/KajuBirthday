@@ -1,0 +1,33 @@
+﻿.dreams {
+  padding: clamp(56px, 12vw, 96px) clamp(22px, 6vw, 48px);
+}
+
+.dreams h2 {
+  margin-bottom: clamp(24px, 5vw, 36px);
+  color: var(--primary);
+  font-size: clamp(2.1rem, 8vw, 3.3rem);
+  line-height: 1.05;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.dream-list {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.dream {
+  margin-bottom: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  background: var(--glass);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: var(--shadow-card);
+  color: rgba(47, 47, 47, 0.78);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.7;
+  text-align: center;
+}

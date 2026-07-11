@@ -1,0 +1,10 @@
+﻿.section-title {
+  max-width: 720px;
+  margin: 0 auto clamp(24px, 5vw, 36px);
+  color: var(--primary);
+  font-size: clamp(2.15rem, 9vw, 3.65rem);
+  font-weight: 800;
+  line-height: 1.02;
+  text-align: center;
+  text-wrap: balance;
+}

@@ -1,0 +1,99 @@
+﻿.home-page {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.story-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 212, 232, 0.46), transparent 24rem),
+    linear-gradient(
+      135deg,
+      rgba(255, 182, 193, 0.12) 0%,
+      rgba(255, 218, 185, 0.08) 50%,
+      rgba(255, 182, 193, 0.12) 100%
+    );
+}
+
+.chapter {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(22px, 5vw, 44px);
+  animation: chapterEnter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes chapterEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.chapter-exit {
+  animation: chapterExit 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes chapterExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(1.05);
+  }
+}
+
+.continue-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(28px, 7vw, 48px) 20px;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .chapter {
+    min-height: auto;
+    padding: 18px 16px;
+  }
+
+  .continue-container {
+    padding: 26px 16px 34px;
+  }
+}
