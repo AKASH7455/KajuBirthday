@@ -3,9 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  min-height: 54px;
-  padding: 16px 36px;
+  gap: 12px;
+  width: min(100%, 360px);
+  min-height: 56px;
+  padding: 15px 28px;
   font-size: 1rem;
   font-weight: 750;
   line-height: 1;
@@ -25,7 +26,7 @@
   -webkit-backdrop-filter: blur(18px);
   color: white;
   box-shadow:
-    0 18px 42px rgba(255, 95, 162, 0.3),
+    0 14px 30px rgba(255, 95, 162, 0.24),
     inset 0 1px 0 rgba(255, 255, 255, 0.54);
   text-shadow: 0 1px 2px rgba(128, 32, 72, 0.18);
   overflow: hidden;
@@ -64,14 +65,14 @@
   transform: translateY(-3px);
   filter: saturate(1.04);
   box-shadow:
-    0 24px 52px rgba(255, 95, 162, 0.36),
+    0 18px 38px rgba(255, 95, 162, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.62);
 }
 
 .continue-button:active {
   transform: translateY(0) scale(0.98);
   box-shadow:
-    0 12px 28px rgba(255, 95, 162, 0.28),
+    0 10px 22px rgba(255, 95, 162, 0.24),
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
@@ -99,7 +100,8 @@
 
 @media (max-width: 768px) {
   .continue-button {
-    padding: 15px 32px;
+    width: min(100%, 340px);
+    padding: 14px 26px;
     font-size: 0.98rem;
     gap: 10px;
   }
@@ -111,12 +113,11 @@
 
 @media (max-width: 480px) {
   .continue-button {
+    width: min(100%, 312px);
     min-height: 52px;
-    padding: 14px 28px;
+    padding: 13px 22px;
     font-size: 0.95rem;
     gap: 8px;
-    width: 100%;
-    max-width: 292px;
   }
 }
 

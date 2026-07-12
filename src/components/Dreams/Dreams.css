@@ -1,5 +1,5 @@
 ﻿.dreams {
-  padding: clamp(56px, 12vw, 96px) clamp(22px, 6vw, 48px);
+  padding: clamp(42px, 9vw, 84px) clamp(18px, 5vw, 44px) clamp(18px, 4vw, 36px);
 }
 
 .dreams h2 {
@@ -35,7 +35,7 @@
 /* Mobile Devices (up to 480px) */
 @media (max-width: 480px) {
   .dreams {
-    padding: 56px 18px 72px;
+    padding: 34px 14px 16px;
   }
 
   .dreams h2 {
@@ -55,7 +55,7 @@
 /* Tablet Devices (481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .dreams {
-    padding: 64px 24px 80px;
+    padding: 42px 20px 18px;
   }
 
   .dreams h2 {
@@ -75,7 +75,7 @@
 /* Desktop Devices (769px to 1200px) */
 @media (min-width: 769px) and (max-width: 1200px) {
   .dreams {
-    padding: 80px 32px 96px;
+    padding: 58px 28px 24px;
   }
 
   .dreams h2 {
@@ -95,7 +95,7 @@
 /* Large Desktop (1201px and above) */
 @media (min-width: 1201px) {
   .dreams {
-    padding: 96px 48px 112px;
+    padding: 74px 44px 30px;
   }
 
   .dreams h2 {

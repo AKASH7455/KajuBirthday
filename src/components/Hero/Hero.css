@@ -138,8 +138,8 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 72px 22px 52px;
-    gap: 22px;
+    padding: 72px 22px 8px;
+    gap: 18px;
   }
 
   .hero__title {
@@ -159,8 +159,8 @@
 /* Tablet Devices (481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .hero {
-    padding: 80px 24px 60px;
-    gap: 24px;
+    padding: 80px 24px 16px;
+    gap: 20px;
   }
 
   .hero__title {
@@ -179,8 +179,8 @@
 /* Desktop Devices (769px to 1200px) */
 @media (min-width: 769px) and (max-width: 1200px) {
   .hero {
-    padding: 90px 28px 72px;
-    gap: 28px;
+    padding: 90px 28px 24px;
+    gap: 24px;
   }
 
   .hero__title {
@@ -195,8 +195,8 @@
 /* Large Desktop (1201px and above) */
 @media (min-width: 1201px) {
   .hero {
-    padding: 112px 32px 84px;
-    gap: 32px;
+    padding: 112px 32px 32px;
+    gap: 28px;
   }
 
   .hero__title {

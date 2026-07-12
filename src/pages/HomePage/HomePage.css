@@ -41,6 +41,12 @@
   animation: chapterEnter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+.chapter:not(.chapter-0) {
+  min-height: auto;
+  padding-bottom: 0;
+}
+
 @keyframes chapterEnter {
   0% {
     opacity: 0;
@@ -93,8 +99,14 @@
     padding: 18px 16px;
   }
 
-  .continue-container {
-    padding: 26px 16px 34px;
+  
+.chapter:not(.chapter-0) {
+  min-height: auto;
+  padding-bottom: 0;
+}
+
+.continue-container {
+    padding: 4px 16px 8px;
   }
 }
 
@@ -104,8 +116,14 @@
     padding: 28px 24px;
   }
 
-  .continue-container {
-    padding: 32px 24px 40px;
+  
+.chapter:not(.chapter-0) {
+  min-height: auto;
+  padding-bottom: 0;
+}
+
+.continue-container {
+    padding: 8px 24px 12px;
   }
 }
 
@@ -115,8 +133,14 @@
     padding: 36px 32px;
   }
 
-  .continue-container {
-    padding: 40px 32px 48px;
+  
+.chapter:not(.chapter-0) {
+  min-height: auto;
+  padding-bottom: 0;
+}
+
+.continue-container {
+    padding: 12px 32px 16px;
   }
 }
 
@@ -126,7 +150,13 @@
     padding: 44px 40px;
   }
 
-  .continue-container {
-    padding: 48px 40px 56px;
+  
+.chapter:not(.chapter-0) {
+  min-height: auto;
+  padding-bottom: 0;
+}
+
+.continue-container {
+    padding: 16px 40px 20px;
   }
 }
