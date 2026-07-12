@@ -1,9 +1,10 @@
 ﻿.countdown {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(8px, 2.5vw, 14px);
-  padding: 12px 0 2px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(10px, 2.5vw, 16px);
+  padding: 12px 0;
+  align-items: stretch;
 }
 
 .time-box {
@@ -12,157 +13,179 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   min-width: 0;
-  height: clamp(84px, 22vw, 106px);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-md);
+  height: clamp(86px, 22vw, 110px);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 22px;
+
   background: rgba(255, 255, 255, 0.42);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
   box-shadow:
-    0 14px 34px rgba(255, 95, 162, 0.13),
-    inset 0 1px 0 rgba(255, 255, 255, 0.78);
+    0 12px 30px rgba(255, 95, 162, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
   overflow: hidden;
+  flex-shrink: 0;
+  contain: layout paint;
+
   transition:
-    transform 0.32s var(--ease-premium),
-    box-shadow 0.32s var(--ease-premium);
+    transform .35s ease,
+    box-shadow .35s ease;
 }
 
 .time-box::before {
   content: "";
   position: absolute;
   top: -40%;
-  left: -70%;
-  width: 70%;
+  left: -80%;
+  width: 65%;
   height: 180%;
-  background: rgba(255, 255, 255, 0.2);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.35),
+    transparent
+  );
+
   transform: rotate(25deg);
-  transition: left 0.65s ease;
+  transition: left .8s ease;
 }
 
-.time-box:hover::before {
-  left: 130%;
-}
+@media (hover: hover) {
+  .time-box:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 18px 40px rgba(255,95,162,.18),
+      inset 0 1px 0 rgba(255,255,255,.9);
+  }
 
-.time-box:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 20px 46px rgba(255, 95, 162, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.84);
+  .time-box:hover::before {
+    left: 140%;
+  }
 }
 
 .time-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 2ch;
+
   color: var(--primary);
   font-family: var(--font-display);
-  font-size: clamp(1.8rem, 7vw, 2.5rem);
+  font-size: clamp(2rem, 7vw, 2.6rem);
   font-weight: 800;
-  line-height: 0.95;
-  text-shadow: 0 0 18px rgba(255, 95, 162, 0.18);
+  line-height: 1;
+
+  text-align: center;
+
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+
+  text-shadow: 0 0 16px rgba(255,95,162,.18);
 }
 
 .time-label {
   margin-top: 10px;
-  color: rgba(47, 47, 47, 0.58);
-  font-size: clamp(0.58rem, 2.4vw, 0.72rem);
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  line-height: 1;
+
+  color: rgba(47,47,47,.65);
+
+  font-size: clamp(.58rem,2vw,.75rem);
+  font-weight: 700;
+
+  letter-spacing: .12em;
   text-transform: uppercase;
+  line-height: 1;
 }
 
-@media (max-width: 380px) {
-  .countdown {
-    gap: 7px;
-    padding-top: 10px;
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width:380px){
+
+  .countdown{
+    gap:8px;
   }
 
-  .time-box {
-    height: 82px;
-    border-radius: 20px;
+  .time-box{
+    height:82px;
+    border-radius:18px;
   }
 
-  .time-label {
-    margin-top: 8px;
-    letter-spacing: 0.06em;
+  .time-value{
+    font-size:1.8rem;
   }
+
+  .time-label{
+    font-size:.56rem;
+    margin-top:8px;
+  }
+
 }
 
-/* Mobile Devices (381px to 480px) */
-@media (min-width: 381px) and (max-width: 480px) {
-  .countdown {
-    gap: 10px;
-    padding-top: 10px;
+/* ===========================
+   Mobile
+=========================== */
+
+@media (min-width:381px) and (max-width:480px){
+
+  .countdown{
+    gap:10px;
   }
 
-  .time-box {
-    height: 90px;
+  .time-box{
+    height:90px;
   }
 
-  .time-value {
-    font-size: clamp(2rem, 6vw, 2.2rem);
+  .time-value{
+    font-size:2rem;
   }
 
-  .time-label {
-    font-size: 0.65rem;
-  }
 }
 
-/* Tablet Devices (481px to 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .countdown {
-    gap: 12px;
+/* ===========================
+   Tablet
+=========================== */
+
+@media (min-width:481px) and (max-width:768px){
+
+  .countdown{
+    gap:12px;
   }
 
-  .time-box {
-    height: 96px;
+  .time-box{
+    height:98px;
   }
 
-  .time-value {
-    font-size: clamp(2.1rem, 5vw, 2.3rem);
+  .time-value{
+    font-size:2.2rem;
   }
 
-  .time-label {
-    font-size: 0.68rem;
-    margin-top: 12px;
-  }
 }
 
-/* Desktop Devices (769px to 1200px) */
-@media (min-width: 769px) and (max-width: 1200px) {
-  .countdown {
-    gap: 13px;
+/* ===========================
+   Desktop
+=========================== */
+
+@media (min-width:769px){
+
+  .countdown{
+    max-width:650px;
+    margin:auto;
   }
 
-  .time-box {
-    height: 100px;
+  .time-box{
+    height:108px;
   }
 
-  .time-value {
-    font-size: clamp(2.2rem, 4vw, 2.4rem);
+  .time-value{
+    font-size:2.5rem;
   }
 
-  .time-label {
-    font-size: 0.7rem;
-    margin-top: 12px;
-  }
-}
-
-/* Large Desktop (1201px and above) */
-@media (min-width: 1201px) {
-  .countdown {
-    gap: 14px;
-  }
-
-  .time-box {
-    height: 106px;
-  }
-
-  .time-value {
-    font-size: 2.5rem;
-  }
-
-  .time-label {
-    font-size: 0.72rem;
-    margin-top: 10px;
-  }
 }

@@ -1,38 +1,45 @@
-import { useEffect, useState } from 'react'
-import './FloatingHearts.css'
+import { useEffect, useState } from "react";
+import "./FloatingHearts.css";
 
 export default function FloatingHearts() {
-  const [hearts, setHearts] = useState([])
+  const [hearts, setHearts] = useState([]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const newHeart = {
-        id: Date.now(),
-        left: Math.random() * 100,
-        size: Math.random() * 20 + 20,
-        duration: Math.random() * 3 + 4
-      }
-      setHearts(prev => [...prev.slice(-15), newHeart])
-    }, 500)
+    let id = 0;
 
-    return () => clearInterval(interval)
-  }, [])
+    const interval = setInterval(() => {
+      id++;
+
+      const newHeart = {
+        id,
+        left: Math.random() * 96 + 2, // 2% - 98%
+        size: Math.random() * 12 + 22, // 22px - 34px
+        duration: Math.random() * 6 + 14, // 14s - 20s
+        opacity: Math.random() * 0.3 + 0.7,
+      };
+
+      setHearts((prev) => [...prev.slice(-10), newHeart]);
+    }, 1400); // Every 1.4 second
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="hearts-container">
-      {hearts.map(heart => (
-        <div
+      {hearts.map((heart) => (
+        <span
           key={heart.id}
           className="heart"
           style={{
             left: `${heart.left}%`,
             fontSize: `${heart.size}px`,
-            animationDuration: `${heart.duration}s`
+            animationDuration: `${heart.duration}s`,
+            opacity: heart.opacity,
           }}
         >
-          ❤️
-        </div>
+          🎀
+        </span>
       ))}
     </div>
-  )
+  );
 }

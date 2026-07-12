@@ -1,53 +1,43 @@
 .hearts-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+  inset: 0;
   overflow: hidden;
+  pointer-events: none;
   z-index: 1;
 }
 
 .heart {
   position: absolute;
-  bottom: -50px;
-  animation-name: floatUp;
-  animation-timing-function: cubic-bezier(0.42, 0, 0.18, 1);
-  animation-fill-mode: forwards;
-  animation-duration: 9.5s !important;
-  opacity: 0.7;
+  bottom: -70px;
+  animation: floatHeart linear forwards;
   will-change: transform, opacity;
+  filter: drop-shadow(0 0 10px rgba(255, 80, 120, 0.35));
 }
 
-.heart:nth-child(3n + 1) {
-  animation-duration: 10.5s !important;
-  animation-delay: 0.35s;
-}
-
-.heart:nth-child(3n + 2) {
-  animation-duration: 8.8s !important;
-  animation-delay: 0.75s;
-}
-
-.heart:nth-child(4n) {
-  animation-duration: 11s !important;
-  animation-delay: 0.15s;
-}
-
-@keyframes floatUp {
+@keyframes floatHeart {
   0% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
+    transform: translate3d(0, 0, 0) scale(0.7) rotate(0deg);
     opacity: 0;
   }
-  12% {
-    opacity: 0.7;
+
+  10% {
+    opacity: 0.9;
   }
-  88% {
-    opacity: 0.7;
+
+  25% {
+    transform: translate3d(-25px, -25vh, 0) scale(0.85) rotate(-10deg);
   }
+
+  50% {
+    transform: translate3d(20px, -55vh, 0) scale(1) rotate(10deg);
+  }
+
+  75% {
+    transform: translate3d(-15px, -85vh, 0) scale(1.1) rotate(-5deg);
+  }
+
   100% {
-    transform: translate3d(0, -110vh, 0) rotate(360deg);
+    transform: translate3d(30px, -125vh, 0) scale(1.2) rotate(8deg);
     opacity: 0;
   }
 }
