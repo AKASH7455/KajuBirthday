@@ -87,4 +87,98 @@
   .glass-card {
     border-radius: 28px;
   }
+
+  .title {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .title-highlight {
+    font-size: clamp(2.3rem, 11vw, 3.4rem);
+  }
+
+  .subtitle {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet Devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .countdown-page {
+    padding: 22px;
+  }
+
+  .countdown-content {
+    max-width: 560px;
+  }
+
+  .glass-card {
+    padding: 36px 28px;
+  }
+
+  .title {
+    font-size: clamp(2.8rem, 8vw, 3.6rem);
+  }
+
+  .title-highlight {
+    font-size: clamp(3.2rem, 9vw, 4rem);
+  }
+
+  .subtitle {
+    max-width: 400px;
+  }
+}
+
+/* Desktop Devices (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .countdown-page {
+    padding: 24px;
+  }
+
+  .countdown-content {
+    max-width: 590px;
+  }
+
+  .glass-card {
+    padding: 42px 32px;
+  }
+
+  .title {
+    font-size: clamp(3.2rem, 7vw, 4rem);
+  }
+
+  .title-highlight {
+    font-size: clamp(3.6rem, 8vw, 4.5rem);
+  }
+
+  .subtitle {
+    max-width: 420px;
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .countdown-page {
+    padding: 24px;
+  }
+
+  .countdown-content {
+    max-width: 620px;
+  }
+
+  .glass-card {
+    padding: 48px 36px;
+  }
+
+  .title {
+    font-size: 4.4rem;
+  }
+
+  .title-highlight {
+    font-size: 4.9rem;
+  }
+
+  .subtitle {
+    max-width: 430px;
+  }
 }

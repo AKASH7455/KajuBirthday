@@ -97,3 +97,36 @@
     padding: 26px 16px 34px;
   }
 }
+
+/* Tablet Devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .chapter {
+    padding: 28px 24px;
+  }
+
+  .continue-container {
+    padding: 32px 24px 40px;
+  }
+}
+
+/* Desktop Devices (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .chapter {
+    padding: 36px 32px;
+  }
+
+  .continue-container {
+    padding: 40px 32px 48px;
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .chapter {
+    padding: 44px 40px;
+  }
+
+  .continue-container {
+    padding: 48px 40px 56px;
+  }
+}

@@ -41,3 +41,98 @@
   font-style: italic;
   line-height: 1.25;
 }
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .love-letter {
+    padding: 56px 18px 72px;
+  }
+
+  .letter {
+    padding: 28px 20px;
+  }
+
+  .letter h2 {
+    font-size: clamp(1.8rem, 9vw, 2.4rem);
+  }
+
+  .letter p {
+    font-size: 0.95rem;
+  }
+
+  .signature {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet Devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .love-letter {
+    padding: 64px 24px 80px;
+  }
+
+  .letter {
+    max-width: 580px;
+    padding: 36px 28px;
+  }
+
+  .letter h2 {
+    font-size: clamp(2.2rem, 6vw, 2.8rem);
+  }
+
+  .letter p {
+    font-size: 1rem;
+  }
+
+  .signature {
+    font-size: 1.4rem;
+  }
+}
+
+/* Desktop Devices (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .love-letter {
+    padding: 80px 32px 96px;
+  }
+
+  .letter {
+    max-width: 620px;
+    padding: 44px 32px;
+  }
+
+  .letter h2 {
+    font-size: clamp(2.6rem, 5vw, 3.2rem);
+  }
+
+  .letter p {
+    font-size: 1.05rem;
+  }
+
+  .signature {
+    font-size: 1.6rem;
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .love-letter {
+    padding: 104px 48px 120px;
+  }
+
+  .letter {
+    max-width: 660px;
+    padding: 56px 40px;
+  }
+
+  .letter h2 {
+    font-size: 3.4rem;
+  }
+
+  .letter p {
+    font-size: 1.08rem;
+  }
+
+  .signature {
+    font-size: 1.75rem;
+  }
+}

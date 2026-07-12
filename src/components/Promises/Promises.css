@@ -31,3 +31,83 @@
   line-height: 1.7;
   text-align: center;
 }
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .promises {
+    padding: 56px 18px 72px;
+  }
+
+  .promises h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .promise-list {
+    max-width: 100%;
+  }
+
+  .promise {
+    padding: 16px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet Devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .promises {
+    padding: 64px 24px 80px;
+  }
+
+  .promises h2 {
+    font-size: clamp(2.2rem, 6vw, 2.8rem);
+  }
+
+  .promise-list {
+    max-width: 520px;
+  }
+
+  .promise {
+    padding: 18px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Desktop Devices (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .promises {
+    padding: 80px 32px 96px;
+  }
+
+  .promises h2 {
+    font-size: clamp(2.6rem, 5vw, 3.2rem);
+  }
+
+  .promise-list {
+    max-width: 540px;
+  }
+
+  .promise {
+    padding: 20px 22px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .promises {
+    padding: 96px 48px 112px;
+  }
+
+  .promises h2 {
+    font-size: 3.3rem;
+  }
+
+  .promise-list {
+    max-width: 560px;
+  }
+
+  .promise {
+    padding: 18px 20px;
+    font-size: 1rem;
+  }
+}

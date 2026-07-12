@@ -26,3 +26,70 @@
   font-weight: 500;
   line-height: 1.78;
 }
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .surprise {
+    padding: 56px 18px 72px;
+  }
+
+  .surprise h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .surprise-box {
+    padding: 28px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet Devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .surprise {
+    padding: 64px 24px 80px;
+  }
+
+  .surprise h2 {
+    font-size: clamp(2.2rem, 6vw, 2.8rem);
+  }
+
+  .surprise-box {
+    max-width: 520px;
+    padding: 36px 28px;
+    font-size: 1rem;
+  }
+}
+
+/* Desktop Devices (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .surprise {
+    padding: 80px 32px 96px;
+  }
+
+  .surprise h2 {
+    font-size: clamp(2.6rem, 5vw, 3.2rem);
+  }
+
+  .surprise-box {
+    max-width: 540px;
+    padding: 42px 32px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .surprise {
+    padding: 96px 48px 112px;
+  }
+
+  .surprise h2 {
+    font-size: 3.3rem;
+  }
+
+  .surprise-box {
+    max-width: 560px;
+    padding: 52px 40px;
+    font-size: 1.18rem;
+  }
+}

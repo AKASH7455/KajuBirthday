@@ -7,3 +7,32 @@
   padding: clamp(24px, 6vw, 40px);
   box-shadow: var(--shadow-card);
 }
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .glass-card {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+}
+
+/* Tablet Devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .glass-card {
+    padding: 28px 24px;
+  }
+}
+
+/* Desktop Devices (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .glass-card {
+    padding: 34px 30px;
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .glass-card {
+    padding: 40px 36px;
+  }
+}

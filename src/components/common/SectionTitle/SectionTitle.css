@@ -8,3 +8,39 @@
   text-align: center;
   text-wrap: balance;
 }
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .section-title {
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+}
+
+/* Tablet Devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .section-title {
+    max-width: 640px;
+    margin-bottom: 24px;
+    font-size: clamp(2.2rem, 6vw, 2.9rem);
+  }
+}
+
+/* Desktop Devices (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .section-title {
+    max-width: 680px;
+    margin-bottom: 30px;
+    font-size: clamp(2.5rem, 5vw, 3.3rem);
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .section-title {
+    max-width: 720px;
+    margin-bottom: 36px;
+    font-size: 3.65rem;
+  }
+}

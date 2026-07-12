@@ -26,3 +26,70 @@
   font-weight: 500;
   line-height: 1.82;
 }
+
+/* Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+  .wishes {
+    padding: 56px 18px 72px;
+  }
+
+  .wishes h2 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .wish-card {
+    padding: 24px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet Devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .wishes {
+    padding: 64px 24px 80px;
+  }
+
+  .wishes h2 {
+    font-size: clamp(2.2rem, 6vw, 2.8rem);
+  }
+
+  .wish-card {
+    max-width: 520px;
+    padding: 32px 28px;
+    font-size: 1rem;
+  }
+}
+
+/* Desktop Devices (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .wishes {
+    padding: 80px 32px 96px;
+  }
+
+  .wishes h2 {
+    font-size: clamp(2.6rem, 5vw, 3.2rem);
+  }
+
+  .wish-card {
+    max-width: 540px;
+    padding: 38px 32px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .wishes {
+    padding: 96px 48px 112px;
+  }
+
+  .wishes h2 {
+    font-size: 3.3rem;
+  }
+
+  .wish-card {
+    max-width: 560px;
+    padding: 44px 40px;
+    font-size: 1.18rem;
+  }
+}

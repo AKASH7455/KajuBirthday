@@ -108,3 +108,78 @@
     width: max-content;
   }
 }
+
+/* Tablet Devices (521px to 768px) */
+@media (min-width: 521px) and (max-width: 768px) {
+  .timeline {
+    padding: 64px 24px 80px;
+  }
+
+  .timeline h2 {
+    font-size: clamp(2.5rem, 7vw, 3.2rem);
+  }
+
+  .timeline-subtitle {
+    max-width: 480px;
+  }
+
+  .timeline-item {
+    gap: 20px;
+  }
+
+  .year {
+    flex: 0 0 70px;
+  }
+
+  .content {
+    padding: 20px 24px;
+  }
+}
+
+/* Desktop Devices (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .timeline {
+    padding: 80px 32px 96px;
+    max-width: 800px;
+  }
+
+  .timeline h2 {
+    font-size: clamp(2.8rem, 6vw, 3.6rem);
+  }
+
+  .timeline-subtitle {
+    max-width: 520px;
+  }
+
+  .timeline-item {
+    gap: 24px;
+  }
+
+  .content {
+    padding: 24px 28px;
+  }
+}
+
+/* Large Desktop (1201px and above) */
+@media (min-width: 1201px) {
+  .timeline {
+    padding: 108px 48px 120px;
+    max-width: 900px;
+  }
+
+  .timeline h2 {
+    font-size: 3.9rem;
+  }
+
+  .timeline-subtitle {
+    max-width: 560px;
+  }
+
+  .timeline-item {
+    gap: 28px;
+  }
+
+  .content {
+    padding: 32px;
+  }
+}
