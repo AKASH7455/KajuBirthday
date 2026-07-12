@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(8px, 2.5vw, 14px);
-  padding: 20px 0 4px;
+  padding: 12px 0 2px;
 }
 
 .time-box {
@@ -73,6 +73,7 @@
 @media (max-width: 380px) {
   .countdown {
     gap: 7px;
+    padding-top: 10px;
   }
 
   .time-box {
@@ -90,6 +91,7 @@
 @media (min-width: 381px) and (max-width: 480px) {
   .countdown {
     gap: 10px;
+    padding-top: 10px;
   }
 
   .time-box {

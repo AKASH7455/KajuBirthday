@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 24px;
+  min-height: 100svh;
+  padding: clamp(18px, 4vw, 24px);
   overflow: hidden;
   background:
     radial-gradient(circle at 50% 16%, rgba(255, 212, 232, 0.78), transparent 24rem),
@@ -16,12 +16,10 @@
   z-index: 10;
   width: 100%;
   max-width: 620px;
-  
- 
 }
 
 .glass-card {
-  padding: clamp(30px, 7vw, 48px) clamp(22px, 6vw, 36px);
+  padding: clamp(28px, 6vw, 46px) clamp(22px, 6vw, 36px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   background: var(--glass);
@@ -35,7 +33,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding: 9px 18px;
   border: 1px solid rgba(255, 95, 162, 0.12);
   border-radius: var(--radius-pill);
@@ -63,7 +61,7 @@
 
 .subtitle {
   max-width: 430px;
-  margin: 0 auto 30px;
+  margin: 0 auto 22px;
   color: rgba(47, 47, 47, 0.72);
   font-size: clamp(0.98rem, 3.2vw, 1.08rem);
   font-weight: 500;
@@ -72,7 +70,7 @@
 }
 
 .footer-text {
-  margin-top: 24px;
+  margin-top: 18px;
   color: rgba(47, 47, 47, 0.56);
   font-size: 0.88rem;
   font-weight: 650;
@@ -81,11 +79,20 @@
 
 @media (max-width: 480px) {
   .countdown-page {
-    padding: 18px;
+    padding: 14px;
+  }
+
+  .countdown-content {
+    max-width: 390px;
   }
 
   .glass-card {
+    padding: 24px 16px;
     border-radius: 28px;
+  }
+
+  .badge {
+    margin-bottom: 14px;
   }
 
   .title {
@@ -98,14 +105,20 @@
 
   .subtitle {
     max-width: 100%;
+    margin-bottom: 18px;
     font-size: 0.95rem;
+    line-height: 1.68;
+  }
+
+  .footer-text {
+    margin-top: 16px;
   }
 }
 
 /* Tablet Devices (481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .countdown-page {
-    padding: 22px;
+    padding: 20px;
   }
 
   .countdown-content {
@@ -113,7 +126,7 @@
   }
 
   .glass-card {
-    padding: 36px 28px;
+    padding: 34px 28px;
   }
 
   .title {
@@ -131,16 +144,12 @@
 
 /* Desktop Devices (769px to 1200px) */
 @media (min-width: 769px) and (max-width: 1200px) {
-  .countdown-page {
-    padding: 24px;
-  }
-
   .countdown-content {
     max-width: 590px;
   }
 
   .glass-card {
-    padding: 42px 32px;
+    padding: 40px 32px;
   }
 
   .title {
@@ -158,16 +167,8 @@
 
 /* Large Desktop (1201px and above) */
 @media (min-width: 1201px) {
-  .countdown-page {
-    padding: 24px;
-  }
-
-  .countdown-content {
-    max-width: 620px;
-  }
-
   .glass-card {
-    padding: 48px 36px;
+    padding: 46px 36px;
   }
 
   .title {
