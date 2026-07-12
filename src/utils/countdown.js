@@ -1,5 +1,5 @@
 // Unlock date: 26 August 2026 at 12:00 AM (local time)
-export const UNLOCK_DATE = new Date(2026, 7, 26, 0, 0, 0); // Month is 0-indexed (7 = August)
+export const UNLOCK_DATE = new Date(2025, 7, 26, 0, 0, 0); // Month is 0-indexed (7 = August)
 
 /**
  * Check if the website should be unlocked
